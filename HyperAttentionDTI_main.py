@@ -94,7 +94,7 @@ def test_model(dataset_load,save_path,DATASET, LOSS, dataset = "Train",lable = "
     return results,Accuracy_test, Precision_test, Recall_test, AUC_test, PRC_test
 
 
-def get_kfold_data(i, datasets, k=2):
+def get_kfold_data(i, datasets, k=5):
     
     fold_size = len(datasets) // k  
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     DATASET = "DrugBank"
     # DATASET = "Davis"
     print("Train in " + DATASET)
-    dir_input = f'{current_dir_path}\data\{DATASET}.txt'
+    dir_input = f'{current_dir_path}\\data\\{DATASET}.txt'
 
     if DATASET == "DrugBank":
         weight_CE = None
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     # random shuffle
     print("data shuffle")
     dataset = shuffle_dataset(train_data_list, SEED)
-    K_Fold = 2
+    K_Fold = 5
 
 
     Accuracy_List_stable, AUC_List_stable, AUPR_List_stable, Recall_List_stable, Precision_List_stable = [], [], [], [], []

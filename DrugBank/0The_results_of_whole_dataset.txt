@@ -1,0 +1,17 @@
+current_time:Oct28_12-30-18
+Learning_rate:5e-05
+Epoch:3
+Batch_size:32
+Resume:False
+Patience:50
+FC_Dropout:0.5
+test_split:0.2
+validation_split:0.2
+decay_interval:10
+lr_decay:0.5
+weight_decay:0.0001
+embed_dim:64
+protein_kernel:[4, 8, 12]
+drug_kernel:[4, 6, 8]
+conv:40
+char_dim:64
